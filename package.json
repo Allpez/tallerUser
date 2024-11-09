@@ -2,14 +2,23 @@
   "name": "talleruser",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./server.js",
+    "dev": "nodemon ./server.js",
+    "dataUsers": "node ./models/data/users.js",
+    "dataHoldings": "node ./models/data/holdings.js",
+    "dataInvoices": "node ./models/data/invoices.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.21.1"
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.1",
+    "nodemon": "^3.1.7",
+    "save-dev": "^0.0.1-security"
   }
 }
