@@ -1,3 +1,11 @@
+Debe ejecutar el comando:
+
+ - npm install express
+ - npm install -- save-dev nodemon
+ - npm install dotenv
+ - npm install mongoose
+ - 
+
 Taller Express
 
 Crear un servidor de Express, descargar y configurar todo lo necesario para poder cumplir con los siguientes puntos
