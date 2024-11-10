@@ -4,6 +4,8 @@ Debe ejecutar el comando:
  - npm install -- save-dev nodemon
  - npm install dotenv
  - npm install mongoose
+ - npm i cors
+ - npm i morgan
  - 
 
 Taller Express
