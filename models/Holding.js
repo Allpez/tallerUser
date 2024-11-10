@@ -7,7 +7,7 @@ let schema = new Schema({
     name: { type: String, required: true },
     type: { type: String, required: true },
     value: { type: Number, required: true },
-    user: { type: Schema.Types.ObjectId, ref: 'users' } // Relación referenciada
+    userId: { type: Schema.Types.ObjectId, ref: 'users', required: true } // Relación referenciada
 }, {
     timestamps: true
 })

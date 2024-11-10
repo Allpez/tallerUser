@@ -8,7 +8,7 @@ let schema = new Schema({
     description: { type: String, required: true },
     value: { type: Number, required: true },
     asset: { type: Boolean, required: true },
-    user: { type: Schema.Types.ObjectId, ref: 'users' } // Relación referenciada
+    userId: { type: Schema.Types.ObjectId, ref: 'users', required: true } // Relación referenciada
 }, {
     timestamps: true
 })
