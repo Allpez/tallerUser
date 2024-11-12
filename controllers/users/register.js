@@ -1,6 +1,6 @@
 import User from "../../models/User.js";
 
-let create = async (req, res, next) => {
+let register = async (req, res, next) => {
     try {
         let user = req.body;
 
@@ -26,4 +26,4 @@ let insertMany = async (req, res, next) => {
     }
 };
 
-export { create, insertMany };
+export { register, insertMany };
