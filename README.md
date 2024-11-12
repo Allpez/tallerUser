@@ -6,6 +6,7 @@ Debe ejecutar el comando:
  - npm install mongoose
  - npm i cors
  - npm i morgan
+ - npm install joi
  - 
 
 Taller Express
