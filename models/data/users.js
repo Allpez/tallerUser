@@ -10,8 +10,7 @@ for (let i = 0; i < 10; i++) {
         email: `alexanderlopez@backend${i}.com`,
         address: `Calle # ${i} - ${i}`,
         phone: `123123${i.toString().repeat(4)}`,
-        password: `${i.toString().repeat(4)}`,
-        online: false
+        password: `${i.toString().repeat(4)}`
     });
 }
 

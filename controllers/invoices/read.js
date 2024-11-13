@@ -9,7 +9,7 @@ let allInvoice = async (req, res, next) => {
             query.name = {$regex: '^'+name, $options: 'i'} //Prevalidaciones
         }
         
-        let invoice = await Invoice.find(query);
+        let invoice = await Invoice.find(query).populate('userId', 'name email phone').exec();
         return res.status(200).json({
             response: invoice
         });

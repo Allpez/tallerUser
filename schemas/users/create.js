@@ -23,7 +23,7 @@ const schema = joi.object({     // Creamos el schema que vamos a validar, es un 
         'string.min': 'La contraseña debe tener al menos 8 caracteres',
         'string.pattern.base': 'La contraseña debe incluir al menos una letra, un número y un carácter especial'
     }),    
-    online: joi.boolean().required()
+    online: joi.boolean()
 })
 
 export default schema
