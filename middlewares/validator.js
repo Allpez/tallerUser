@@ -2,7 +2,7 @@
 
 const validator = (schema) => [     //Se va a llenar el arreglo con la respuesta del middleware (los errores).
     (req, res, next) => {
-        const validation = schema.validate(req.body, { abortEarly: false })    //Va a validar el body que venga en el esquema
+        const validation = schema.validate(req.body, { abortEarly: false }) //Va a validar el body que venga en el esquema
         if (validation.error) {
             return res.status(400).json({
                 success: false,

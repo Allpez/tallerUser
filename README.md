@@ -7,7 +7,9 @@ Debe ejecutar el comando:
  - npm i cors
  - npm i morgan
  - npm install joi
- - 
+ - npm install bcryptjs
+ - npm install jsonwebtoken
+ - npm install passport passport-jwt
 
 Taller Express
 
