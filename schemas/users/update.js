@@ -23,7 +23,7 @@ const schema = joi.object({     // Creamos el schema que vamos a validar, es un 
         'string.pattern.base': 'El teléfono debe tener exactamente 10 dígitos'
     }),
     
-    password: joi.string().required().min(8).pattern(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/).messages({
+    password: joi.string().min(8).pattern(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/).messages({
         'string.min': 'La contraseña debe tener al menos 8 caracteres',
         'string.pattern.base': 'La contraseña debe incluir al menos una letra, un número y un carácter especial'
     }),    
