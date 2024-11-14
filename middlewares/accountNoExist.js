@@ -8,8 +8,8 @@ export default async (req, res, next) => {
             req.user = {
                 email: account.email,
                 password: account.password,
-                role: account.role,
-                photo: account.photo
+                name: account.name,
+                phone: account.phone
             }
             return next()
         }
