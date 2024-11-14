@@ -2,7 +2,7 @@ import { Router } from "express";
 import { allUser, usersByID, usersByName } from "../controllers/users/read.js";
 import register from "../controllers/users/register.js"
 import update from "../controllers/users/update.js"
-import deleteOne from "../controllers/users/delete.js"
+import { deleteOne, deleteManyUsers } from "../controllers/users/delete.js"
 import validator from "../middlewares/validator.js";
 import schemaUsersRegister from "../schemas/users/create.js";
 import schemaUsersUpdate from "../schemas/users/update.js";
@@ -18,5 +18,6 @@ routerUsers.get('/name/:name', passport.authenticate('jwt', { session: false }),
 routerUsers.post('/register', validator(schemaUsersRegister), accountExists, createHash, register)
 routerUsers.put('/update', passport.authenticate('jwt', { session: false }), validator(schemaUsersUpdate), createHash, update)
 routerUsers.delete('/deleteOne', passport.authenticate('jwt', { session: false }), deleteOne)
+routerUsers.delete('/deleteMany', passport.authenticate('jwt', { session: false }), deleteManyUsers.destroy)
 
-export default routerUsers  
+export default routerUsers
