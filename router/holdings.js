@@ -5,6 +5,7 @@ import update from "../controllers/holdings/update.js";
 import deleteOne from "../controllers/holdings/delete.js";
 import validator from "../middlewares/validator.js";
 import schemaHoldingsCreate from "../schemas/holdings/create.js";
+import schemaHoldingsUpdate from "../schemas/holdings/update.js";
 import passport from "../middlewares/passport.js";
 
 const routerHoldings = Router()
@@ -14,7 +15,7 @@ routerHoldings.get('/id/:id', passport.authenticate('jwt', { session: false }), 
 routerHoldings.get('/user/:userId', passport.authenticate('jwt', { session: false }), holdingByUser)
 routerHoldings.post('/create', passport.authenticate('jwt', { session: false }), validator(schemaHoldingsCreate), create)
 routerHoldings.post('/insertmany', passport.authenticate('jwt', { session: false }), validator(schemaHoldingsCreate), insertMany)
-routerHoldings.put('/update', passport.authenticate('jwt', { session: false }), validator(schemaHoldingsCreate), update)
+routerHoldings.put('/update', passport.authenticate('jwt', { session: false }), validator(schemaHoldingsUpdate), update)
 routerHoldings.delete('/deleteOne', passport.authenticate('jwt', { session: false }), deleteOne)
 
 export default routerHoldings
