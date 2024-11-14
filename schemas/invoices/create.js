@@ -12,10 +12,10 @@ const schema = joi.object({
         .required()
         .pattern(/^[a-zA-Z0-9\s,#-]+$/)
         .min(6)
-        .max(50)
+        .max(80)
         .messages({
             'string.min': 'La descripción debe tener al menos 6 caracteres',
-            'string.max': 'La descripción debe tener un máximo de 50 caracteres',
+            'string.max': 'La descripción debe tener un máximo de 80 caracteres',
             'string.pattern.base': 'La descripción solo puede contener letras, números y algunos caracteres especiales (#, -, ,)'
         }),
 

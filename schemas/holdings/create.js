@@ -5,12 +5,12 @@ const schema = joi.object({
         .required()
         .pattern(/^[a-zA-Z0-9\s]+$/)
         .min(15)
-        .max(40)
+        .max(60)
         .messages({
             'string.base': 'El nombre debe ser una cadena de texto',
             'string.pattern.base': 'El nombre solo puede contener letras, números y espacios',
             'string.min': 'El nombre debe tener al menos 15 caracteres',
-            'string.max': 'El nombre debe tener un máximo de 40 caracteres'
+            'string.max': 'El nombre debe tener un máximo de 60 caracteres'
         }),
 
     type: joi.string()

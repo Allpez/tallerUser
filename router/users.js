@@ -8,14 +8,15 @@ import schemaUsersRegister from "../schemas/users/create.js";
 import schemaUsersUpdate from "../schemas/users/update.js";
 import accountExists from "../middlewares/accountExists.js";
 import createHash from "../middlewares/createHash.js";
+import passport from "../middlewares/passport.js";
 
 const routerUsers = Router()
 
-routerUsers.get('/all', allUser)
-routerUsers.get('/id/:id', usersByID)
-routerUsers.get('/name/:name', usersByName)
+routerUsers.get('/all', passport.authenticate('jwt', { session: false }), allUser)                  //No estamos usando sesiones de express
+routerUsers.get('/id/:id', passport.authenticate('jwt', { session: false }), usersByID)
+routerUsers.get('/name/:name', passport.authenticate('jwt', { session: false }), usersByName)
 routerUsers.post('/register', validator(schemaUsersRegister), accountExists, createHash, register)
-routerUsers.put('/update', validator(schemaUsersUpdate), createHash, update)
-routerUsers.delete('/deleteOne', deleteOne)
+routerUsers.put('/update', passport.authenticate('jwt', { session: false }), validator(schemaUsersUpdate), createHash, update)
+routerUsers.delete('/deleteOne', passport.authenticate('jwt', { session: false }), deleteOne)
 
 export default routerUsers  
