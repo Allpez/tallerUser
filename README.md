@@ -10,6 +10,7 @@ Debe ejecutar el comando:
  - npm install bcryptjs
  - npm install jsonwebtoken
  - npm install passport passport-jwt
+ - npm i passport-google-oauth
 
 Taller Express
 
